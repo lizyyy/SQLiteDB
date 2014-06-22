@@ -398,4 +398,11 @@ class SQLiteDB {
 		let val = String.fromCString(cstr)
 		return val
 	}
+	class func DateFormatter() -> NSDateFormatter {
+        	let formatter = NSDateFormatter()
+        	formatter.locale = NSLocale(localeIdentifier: "zh_CN")
+        	formatter.calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        	formatter.dateFormat = "yyyy-MM-dd"
+        	return formatter
+    	}
 }
